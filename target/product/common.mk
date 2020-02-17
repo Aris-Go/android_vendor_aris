@@ -14,7 +14,7 @@ $(call inherit-product, vendor/aris/target/product/packages.mk)
 $(call inherit-product, vendor/aris/target/product/version.mk)
 
 # Only logging privapp-permissions whitelist
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+PRODUCT_PRODUCT_PROPERTIES += \
     ro.control_privapp_permissions=log
 
 # Set GMS client ID base
