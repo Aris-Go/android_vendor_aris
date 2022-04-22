@@ -71,6 +71,7 @@
 #                                          modules in system instead of vendor
 
 ifneq ($(TARGET_NO_KERNEL),true)
+ifneq ($(TARGET_NO_KERNEL_OVERRIDE),true)
 
 TARGET_AUTO_KDIR := $(shell echo $(TARGET_DEVICE_DIR) | sed -e 's/^device/kernel/g')
 
@@ -461,4 +462,5 @@ kernel: $(INSTALLED_KERNEL_TARGET)
 .PHONY: dtbo
 dtbo: $(INSTALLED_DTBOIMAGE_TARGET)
 
+endif # TARGET_NO_KERNEL_OVERRIDE
 endif # TARGET_NO_KERNEL
