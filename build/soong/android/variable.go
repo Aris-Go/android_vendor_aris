@@ -13,6 +13,9 @@ type Product_variables struct {
 		Cflags []string
 		Header_libs []string
 	}
+	Target_shim_libs struct {
+		Cppflags []string
+	}
 }
 
 type ProductVariables struct {
@@ -20,4 +23,5 @@ type ProductVariables struct {
 	Additional_gralloc_10_usage_bits  *string `json:",omitempty"`
 	Supports_extended_compress_format  *bool `json:",omitempty"`
 	Qcom_um_soong_namespace  *string `json:",omitempty"`
+	Target_shim_libs *string `json:",omitempty"`
 }
