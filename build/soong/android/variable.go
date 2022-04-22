@@ -24,6 +24,10 @@ type Product_variables struct {
 	Target_shim_libs struct {
 		Cppflags []string
 	}
+	Target_surfaceflinger_fod_lib struct {
+		Cflags []string
+		Whole_static_libs []string
+	}
 }
 
 type ProductVariables struct {
@@ -34,4 +38,5 @@ type ProductVariables struct {
 	Supports_extended_compress_format  *bool `json:",omitempty"`
 	Qcom_um_soong_namespace  *string `json:",omitempty"`
 	Target_shim_libs *string `json:",omitempty"`
+	Target_surfaceflinger_fod_lib *string `json:",omitempty"`
 }
