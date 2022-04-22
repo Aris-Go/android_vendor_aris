@@ -21,6 +21,9 @@ type Product_variables struct {
 		Cflags []string
 		Header_libs []string
 	}
+	Target_process_sdk_version_override struct {
+		Cppflags []string
+	}
 	Target_shim_libs struct {
 		Cppflags []string
 	}
@@ -37,6 +40,7 @@ type ProductVariables struct {
 	Supports_hw_fde_perf  *bool `json:",omitempty"`
 	Supports_extended_compress_format  *bool `json:",omitempty"`
 	Qcom_um_soong_namespace  *string `json:",omitempty"`
+	Target_process_sdk_version_override *string `json:",omitempty"`
 	Target_shim_libs *string `json:",omitempty"`
 	Target_surfaceflinger_fod_lib *string `json:",omitempty"`
 }
