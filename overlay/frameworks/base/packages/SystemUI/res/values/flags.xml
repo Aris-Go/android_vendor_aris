@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+    Copyright (C) 2022 Acme
+    Copyright (C) 2022 YuyukoAOSPMod
+    Copyright (C) 2024 Aris Go Open Source Project
+
+    SPDX-License-Identifier: Apache-2.0
+
+-->
+<resources>
+    <bool name="flag_conversations">true</bool>
+    <bool name="flag_charging_ripple">true</bool>
+</resources>
