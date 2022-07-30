@@ -61,4 +61,8 @@
 
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">5</integer>
+    
+    <!-- Wallpaper cropper package. Used as the default cropper if the active launcher doesn't
+         handle wallpaper cropping. -->
+    <string name="config_wallpaperCropperPackage" translatable="false">com.android.wallpaper</string>
 </resources>
