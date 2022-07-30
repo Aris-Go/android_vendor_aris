@@ -93,6 +93,14 @@ ifneq ($(USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR),true)
     PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr
 endif
 
+# QTI BT support
+ifeq ($(TARGET_USE_QTI_BT_STACK),true)
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/commonsys/packages/apps/Bluetooth \
+    vendor/qcom/opensource/commonsys/system/bt/conf \
+    vendor/qcom/opensource/commonsys/system/bt/main
+endif #TARGET_USE_QTI_BT_STACK
+
 # QCOM HW crypto
 ifeq ($(TARGET_HW_DISK_ENCRYPTION),true)
     TARGET_CRYPTFS_HW_PATH ?= vendor/qcom/opensource/cryptfs_hw
