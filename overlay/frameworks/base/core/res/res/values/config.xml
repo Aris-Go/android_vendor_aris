@@ -15,4 +15,11 @@
     
     <!-- If this is true, long press on power button will be available from the non-interactive state -->
     <bool name="config_supportLongPressPowerWhenNonInteractive">true</bool>
+
+    <!-- Enable round icons by default. -->
+    <!-- For some reason, i dont want to enable it first. -->
+    <bool name="config_useRoundIcon">false</bool>
+
+    <!-- Specifies the path that is used by AdaptiveIconDrawable class to crop launcher icons. -->
+    <string name="config_icon_mask" translatable="false">"M50 0C77.6 0 100 22.4 100 50C100 77.6 77.6 100 50 100C22.4 100 0 77.6 0 50C0 22.4 22.4 0 50 0Z"</string>
 </resources>
