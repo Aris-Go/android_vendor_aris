@@ -1,12 +1,4 @@
 bootstrap_go_package {
-    name: "soong-aris",
-    pkgPath: "aris/soong/android",
-    srcs: [
-        "android/variable.go",
-    ],
-}
-
-bootstrap_go_package {
     name: "soong-aris-generator",
     pkgPath: "aris/soong/generator",
     deps: [
