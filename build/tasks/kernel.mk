@@ -40,9 +40,9 @@
 #                                          For example, for ARM devices,
 #                                          use zImage-dtb instead of zImage.
 #
-#   BOARD_DTB_CFG                      = Path to a mkdtboimg.py config file for dtb.img
+#   BOARD_DTB_CFG                      = Path to a mkdtboimg config file for dtb.img
 #
-#   BOARD_DTBO_CFG                     = Path to a mkdtboimg.py config file
+#   BOARD_DTBO_CFG                     = Path to a mkdtboimg config file
 #
 #   BOARD_CUSTOM_DTBIMG_MK             = Path to a custom dtbimage makefile
 #
@@ -511,7 +511,7 @@ ifneq ($(BOARD_CUSTOM_DTBOIMG_MK),)
 include $(BOARD_CUSTOM_DTBOIMG_MK)
 else
 MKDTIMG := $(HOST_OUT_EXECUTABLES)/mkdtimg$(HOST_EXECUTABLE_SUFFIX)
-MKDTBOIMG := $(HOST_OUT_EXECUTABLES)/mkdtboimg.py$(HOST_EXECUTABLE_SUFFIX)
+MKDTBOIMG := $(HOST_OUT_EXECUTABLES)/mkdtboimg$(HOST_EXECUTABLE_SUFFIX)
 
 $(DTBO_OUT):
 	mkdir -p $(DTBO_OUT)
@@ -559,7 +559,7 @@ $(DTBS_OUT):
 endif
 
 ifdef BOARD_DTB_CFG
-MKDTBOIMG := $(HOST_OUT_EXECUTABLES)/mkdtboimg.py$(HOST_EXECUTABLE_SUFFIX)
+MKDTBOIMG := $(HOST_OUT_EXECUTABLES)/mkdtboimg$(HOST_EXECUTABLE_SUFFIX)
 $(INSTALLED_DTBIMAGE_TARGET): $(MKDTBOIMG)
 endif
 ifeq ($(BOARD_USES_QCOM_MERGE_DTBS_SCRIPT),true)
