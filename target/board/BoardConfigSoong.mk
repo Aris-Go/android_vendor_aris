@@ -46,8 +46,6 @@ SOONG_CONFIG_arisGlobalVars += \
 SOONG_CONFIG_NAMESPACES += arisQcomVars
 SOONG_CONFIG_arisQcomVars += \
     supports_extended_compress_format \
-    supports_hw_fde \
-    supports_hw_fde_perf \
     uses_pre_uplink_features_netmgrd
 
 # Only create display_headers_namespace var if dealing with UM platforms to avoid breaking build for all other platforms
@@ -61,8 +59,6 @@ SOONG_CONFIG_arisGlobalVars_gralloc_handle_has_custom_content_md_reserved_size :
 SOONG_CONFIG_arisGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
 SOONG_CONFIG_arisGlobalVars_uses_egl_display_array := $(TARGET_USES_EGL_DISPLAY_ARRAY)
 SOONG_CONFIG_arisQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
-SOONG_CONFIG_arisQcomVars_supports_hw_fde := $(TARGET_HW_DISK_ENCRYPTION)
-SOONG_CONFIG_arisQcomVars_supports_hw_fde_perf := $(TARGET_HW_DISK_ENCRYPTION_PERF)
 SOONG_CONFIG_arisQcomVars_uses_pre_uplink_features_netmgrd := $(TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD)
 
 # Set default values
