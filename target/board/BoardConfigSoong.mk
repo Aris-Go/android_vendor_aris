@@ -39,7 +39,8 @@ SOONG_CONFIG_arisGlobalVars += \
     target_init_vendor_lib \
     target_ld_shim_libs \
     target_process_sdk_version_override \
-    target_surfaceflinger_udfps_lib
+    target_surfaceflinger_udfps_lib \
+    uses_egl_display_array
 
 SOONG_CONFIG_NAMESPACES += arisQcomVars
 SOONG_CONFIG_arisQcomVars += \
@@ -56,6 +57,7 @@ endif
 
 # Soong bool variables
 SOONG_CONFIG_arisGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
+SOONG_CONFIG_arisGlobalVars_uses_egl_display_array := $(TARGET_USES_EGL_DISPLAY_ARRAY)
 SOONG_CONFIG_arisQcomVars_supports_extended_compress_format := $(AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT)
 SOONG_CONFIG_arisQcomVars_supports_hw_fde := $(TARGET_HW_DISK_ENCRYPTION)
 SOONG_CONFIG_arisQcomVars_supports_hw_fde_perf := $(TARGET_HW_DISK_ENCRYPTION_PERF)
