@@ -9,7 +9,7 @@ include vendor/aris/target/board/BoardConfigKernel.mk
 
 # Qcom-specific bits
 ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
-include vendor/aris/target/board/BoardConfigQcom.mk
+include hardware/qcom-caf/common/BoardConfigQcom.mk
 endif
 
 # Soong
