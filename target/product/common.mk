@@ -29,9 +29,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.storage_manager.enabled=true
 
-# Only logging privapp-permissions whitelist
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.control_privapp_permissions=log
+# Enforce privapp-permissions whitelist
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.control_privapp_permissions=enforce
 
 # ADB authentication
 ifeq ($(TARGET_BUILD_VARIANT),eng)
