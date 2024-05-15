@@ -34,6 +34,7 @@ $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call addVar,$(v))))
 
 SOONG_CONFIG_NAMESPACES += arisGlobalVars
 SOONG_CONFIG_arisGlobalVars += \
+    aapt_version_code \
     additional_gralloc_10_usage_bits \
     gralloc_handle_has_custom_content_md_reserved_size \
     gralloc_handle_has_reserved_size \
@@ -55,6 +56,7 @@ SOONG_CONFIG_arisQcomVars += \
 endif
 
 # Soong bool variables
+SOONG_CONFIG_arisGlobalVars_aapt_version_code := $(shell date -u +%Y%m%d)
 SOONG_CONFIG_arisGlobalVars_gralloc_handle_has_custom_content_md_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE)
 SOONG_CONFIG_arisGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
 SOONG_CONFIG_arisGlobalVars_uses_egl_display_array := $(TARGET_USES_EGL_DISPLAY_ARRAY)
