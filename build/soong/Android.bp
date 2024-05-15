@@ -204,6 +204,26 @@ egl_display_array {
 }
 
 soong_config_module_type {
+    name: "aapt_version_code",
+    module_type: "java_defaults",
+    config_namespace: "arisGlobalVars",
+    value_variables: ["aapt_version_code"],
+    properties: ["aaptflags"],
+}
+
+aapt_version_code {
+    name: "aapt_version_code_defaults",
+    soong_config_variables: {
+        aapt_version_code: {
+            aaptflags: [
+                "--version-code",
+                "%s",
+            ],
+        },
+    },
+}
+
+soong_config_module_type {
     name: "extended_compress_format",
     module_type: "cc_defaults",
     config_namespace: "arisQcomVars",
