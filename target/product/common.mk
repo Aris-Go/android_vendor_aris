@@ -8,4 +8,4 @@
 $(call inherit-product, vendor/aris/overlay/overlay.mk)
 
 # Aris version
--include vendor/aris/config/version.mk
+-include vendor/aris/target/product/version.mk
