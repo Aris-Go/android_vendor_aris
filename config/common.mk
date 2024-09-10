@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Inherit aris config
+$(call inherit-product, vendor/aris/config/aris.mk)
+
 # Inherit aris overly
 $(call inherit-product, vendor/aris/overlay/overlay.mk)
 
