@@ -18,5 +18,7 @@ ARIS_VERSION := ArisGo-$(ARIS_BRANCH)-$(ARIS_DEVICE)-$(ARIS_VERSION_NUM)-$(ARIS_
 ARIS_DISPLAY_VERSION := ArisGo-$(ARIS_BRANCH)-$(ARIS_VERSION_NUM)-$(ARIS_DATE)
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.aris.version=$(ARIS_VERSION) \
-    ro.aris.build.version=$(ARIS_DISPLAY_VERSION)
+    ro.aris.branch=$(ARIS_BRANCH) \
+    ro.aris.build.type=$(ARIS_BUILD_TYPE) \
+    ro.aris.build.version=$(ARIS_DISPLAY_VERSION) \
+    ro.aris.version=$(ARIS_VERSION)
