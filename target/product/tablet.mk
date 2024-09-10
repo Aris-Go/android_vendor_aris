@@ -9,6 +9,9 @@ $(call inherit-product, vendor/aris/target/product/common.mk)
 
 ifeq ($(TABLET_WITH_SIM),true)
 PRODUCT_PACKAGES += \
+    apns-conf.xml
+
+PRODUCT_PACKAGES += \
     messaging \
     Stk
 endif

@@ -7,6 +7,10 @@
 # Inherit common aris stuff
 $(call inherit-product, vendor/aris/target/product/common.mk)
 
+# APN config
+PRODUCT_PACKAGES += \
+    apns-conf.xml
+
 # Telephony packages
 PRODUCT_PACKAGES += \
     messaging \
