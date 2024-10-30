@@ -158,23 +158,6 @@ target_process_sdk_version_overrides {
 }
 
 soong_config_module_type {
-    name: "target_shim_libs",
-    module_type: "cc_defaults",
-    config_namespace: "arisGlobalVars",
-    value_variables: ["target_ld_shim_libs"],
-    properties: ["cppflags"],
-}
-
-target_shim_libs {
-    name: "shim_libs_defaults",
-    soong_config_variables: {
-        target_ld_shim_libs: {
-            cppflags: ["-DLD_SHIM_LIBS=\"%s\""],
-        },
-    },
-}
-
-soong_config_module_type {
     name: "vendor_init",
     module_type: "cc_defaults",
     config_namespace: "arisGlobalVars",
